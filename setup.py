@@ -19,7 +19,8 @@ setup(
     # installed or upgraded on the target machine
     install_requires=[
         #'docutils>=0.3',
-        'Plone'
+        'Plone',
+        'setuptools',
     ],
 
     # metadata for upload to PyPI
@@ -28,4 +29,9 @@ setup(
     description='This is a plamut.odpustki package',
     license='BSD',
     keywords='example odpustki',
+
+    entry_points="""
+    [z3c.autoinclude.plugin]
+    target = plone
+    """,
 )
